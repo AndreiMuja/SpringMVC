@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+}
+
+@import
+	url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body {
+	background: -webkit-linear-gradient(left, #C33764, #1D2671);
+	background: linear-gradient(to right, #C33764, #1D2671);
+	font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#tableTitle h2 {
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.tableHead {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#tableContent {
+	height: 300px;
+	overflow-x: auto;
+	margin-top: 0px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tableHead th {
+	padding: 20px 15px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.tableBody td {
+	padding: 15px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.tableBody tr:hover {
+	background: #288c79;
+	opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.addButton {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 40px;
+  padding: 30px;
+  border: 0.1em;
+  border-radius: 20px;
+  cursor: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.addButton:hover {
+  background: #288c79;
+  opacity: 0.5;
+}
