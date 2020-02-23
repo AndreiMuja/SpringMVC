@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.12.0.xsd">
+  <!-- Configure the database connection here -->
+  <jdbc>
+    <driver>com.mysql.cj.jdbc.Driver</driver>
+    <url>jdbc:mysql://localhost:3306/space_info?useSSL=false&amp;serverTimezone=UTC</url>
+    <user>springstudent</user>
+    <password>springstudent</password>
+    
+  </jdbc>
+
+  <generator>
+    <name>org.jooq.codegen.JavaGenerator</name>
+    
+    <!-- specify that the jOOQ code generator should prefer JSR 310 types over their equivalent JDBC types -->
+    <generate>
+      <javaTimeTypes>true</javaTimeTypes>
+    </generate>
+    
+    <database>
+    
+    <!-- The database type. The format here is:
+           org.jooq.meta.[database].[database]Database -->
+      <name>org.jooq.meta.mysql.MySQLDatabase</name>
+      
+      <!-- All elements that are generated from your schema
+           (A Java regular expression. Use the pipe to separate several expressions)
+           Watch out for case-sensitivity. Depending on your database, this might be important! -->
+      <includes>.*</includes>
+      
+      <!-- All elements that are excluded from your schema
+           (A Java regular expression. Use the pipe to separate several expressions).
+           Excludes match before includes, i.e. excludes have a higher priority -->
+      <excludes></excludes>
+      
+      <!-- The database schema (or in the absence of schema support, in your RDBMS this
+           can be the owner, user, database name) to be generated -->
+      <inputSchema>space_info</inputSchema>
+      
+    </database>
+
+    <target>
+    
+      <!-- The destination package of your generated classes (within the destination directory) -->
+      <packageName>org.jooq.test</packageName>
+
+      <!-- The destination directory of your generated classes -->
+      <directory>C:/Users/Andrei Muja/eclipseProjects/SpringWebMVC/src</directory>
+      
+    </target>
+  </generator>
+</configuration>
